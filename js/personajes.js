@@ -298,8 +298,7 @@ function createCharacterCard(character) {
 
   // Hacer la tarjeta navegable por teclado
   card.setAttribute('tabindex', '0');
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `Ver detalles de ${character.name}`);
+  card.setAttribute('aria-label', `Ver detalles de ${character.name}, ${statusText}, ${speciesText}`);
   
   card.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
