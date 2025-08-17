@@ -39,57 +39,63 @@
 
     <!-- Controles de búsqueda y filtros -->
     <section class="controles-personajes container" aria-labelledby="controles-title">
-      <h2 id="controles-title" class="sr-only">Controles de búsqueda y filtros</h2>
+      <h2 id="controles-title">Buscar y Filtrar Personajes</h2>
       
       <div class="search-controls">
         <div class="search-group">
-          <label for="search-input" class="search-label">Buscar personajes:</label>
-          <input 
-            type="text" 
-            id="search-input" 
-            class="search-input" 
-            placeholder="Ej: Rick, Morty, Summer..."
-            aria-describedby="search-help"
-          >
+          <div class="search-input-wrapper">
+            <label for="search-input" class="search-label">
+              🔍 Buscar por nombre:
+            </label>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Ej: Rick Sanchez, Morty Smith, Summer..."
+              aria-describedby="search-help"
+              autocomplete="off"
+            >
+          </div>
           <button id="search-btn" class="search-btn" aria-label="Buscar personajes">
-            🔍 Buscar
+            Buscar
           </button>
         </div>
         <p id="search-help" class="search-help">
-          Escribe el nombre de un personaje para buscarlo específicamente
+          💡 Escribe al menos 3 caracteres para buscar un personaje específico, o deja vacío para ver todos
         </p>
       </div>
 
       <div class="filter-controls">
         <div class="filter-group">
-          <label for="status-filter" class="filter-label">Estado:</label>
+          <label for="status-filter" class="filter-label">
+            ❤️ Filtrar por estado:
+          </label>
           <select id="status-filter" class="filter-select" aria-describedby="status-help">
-            <option value="">Todos los estados</option>
-            <option value="alive">Vivos</option>
-            <option value="dead">Muertos</option>
-            <option value="unknown">Desconocido</option>
+            <option value="">🌟 Todos los estados</option>
+            <option value="alive">✅ Vivos</option>
+            <option value="dead">💀 Muertos</option>
+            <option value="unknown">❓ Desconocido</option>
           </select>
+          <p id="status-help" class="filter-help">
+            Filtra personajes según su estado vital actual
+          </p>
         </div>
         
         <div class="filter-group">
-          <label for="gender-filter" class="filter-label">Género:</label>
+          <label for="gender-filter" class="filter-label">
+            👤 Filtrar por género:
+          </label>
           <select id="gender-filter" class="filter-select" aria-describedby="gender-help">
-            <option value="">Todos los géneros</option>
-            <option value="male">Masculino</option>
-            <option value="female">Femenino</option>
-            <option value="genderless">Sin género</option>
-            <option value="unknown">Desconocido</option>
+            <option value="">🌈 Todos los géneros</option>
+            <option value="male">👨 Masculino</option>
+            <option value="female">👩 Femenino</option>
+            <option value="genderless">⚪ Sin género</option>
+            <option value="unknown">❓ Desconocido</option>
           </select>
+          <p id="gender-help" class="filter-help">
+            Filtra personajes por su identidad de género
+          </p>
         </div>
-      </div>
-      
-      <div class="help-texts">
-        <p id="status-help" class="filter-help sr-only">
-          Filtra personajes por su estado vital
-        </p>
-        <p id="gender-help" class="filter-help sr-only">
-          Filtra personajes por género
-        </p>
       </div>
     </section>
 
