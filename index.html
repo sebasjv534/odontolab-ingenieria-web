@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Inicio">
+        <img src="assets/logo.jpg" alt="Logo de la clínica dental" width="48" height="48" />
+      </a>
+      <nav aria-label="Navegación principal" role="navigation" class="primary-nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#servicios" class="nav-link">Agendar cita</a></li>
+          <li><a href="#nosotros" class="nav-link">Sobre nosotros</a></li>
+        </ul>
+        <button class="menu-btn" aria-label="Menú de navegación" aria-expanded="false" aria-controls="nav-links" title="Abrir menú">
+          &#9776;
+        </button>
+      </nav>
+    </div>
+   </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <img class="hero-img" src="assets/hero.jpg" alt="Dentista profesional mostrando un modelo dental en clínica moderna">
+    </section>
+
+    <!-- Presentación -->
+    <section class="presentacion container" aria-labelledby="presentacion-title">
+      <div class="presentacion-content">
+        <div class="presentacion-image">
+          <img src="assets/dentistas.jpg" alt="Equipo profesional de dentistas especializados de nuestra clínica">
+        </div>
+        <div class="presentacion-text">
+          <h2 id="presentacion-title">Bienvenidos a nuestra clínica</h2>
+          <p>
+            Contamos con más de 15 años de experiencia brindando atención dental de calidad. 
+            Nuestro equipo de profesionales altamente capacitados utiliza tecnología de vanguardia 
+            para garantizar los mejores resultados en cada tratamiento.
+          </p>
+          <a href="#nosotros" class="learn-more-btn">Conocer más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios container" id="servicios" aria-labelledby="servicios-title">
+      <h2 id="servicios-title">Nuestros servicios</h2>
+      <div class="servicios-grid">
+        <article class="servicio-card">
+          <div class="servicio-image">
+            <img src="assets/servicio1.jpg" alt="Chequeo dental general y diagnóstico profesional">
+          </div>
+          <div class="servicio-content">
+            <h3>Chequeo general</h3>
+            <p>Evaluación completa de tu salud bucal con diagnóstico profesional</p>
+            <button class="agendar-btn" aria-label="Agendar cita para chequeo general">Agendar cita</button>
+          </div>
+        </article>
+        <article class="servicio-card">
+          <div class="servicio-image">
+            <img src="assets/servicio2.jpg" alt="Limpieza dental profesional y profilaxis">
+          </div>
+          <div class="servicio-content">
+            <h3>Limpieza dental</h3>
+            <p>Limpieza profunda y profilaxis para mantener tu sonrisa saludable</p>
+            <button class="agendar-btn" aria-label="Agendar cita para limpieza dental">Agendar cita</button>
+          </div>
+        </article>
+        <article class="servicio-card">
+          <div class="servicio-image">
+            <img src="assets/servicio3.jpg" alt="Blanqueamiento dental profesional">
+          </div>
+          <div class="servicio-content">
+            <h3>Blanqueamiento</h3>
+            <p>Tratamiento de blanqueamiento para una sonrisa más brillante</p>
+            <button class="agendar-btn" aria-label="Agendar cita para blanqueamiento dental">Agendar cita</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion container" id="nosotros" aria-labelledby="titulo-ubicacion">
+      <h2 id="titulo-ubicacion">Encuéntranos</h2>
+      <div class="mapa-texto">
+        <div class="mapa-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4322524922213!2d-74.08876292636032!3d4.69471334171222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b25144634c9%3A0xaa39a3ad6b78b4cb!2sCentro%20Comercial%20Tit%C3%A1n%20Plaza!5e0!3m2!1ses-419!2sco!4v1755399606025!5m2!1ses-419!2sco" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de la clínica dental en Bogotá"
+            aria-label="Mapa mostrando la ubicación de nuestra clínica dental">
+          </iframe>
+        </div>
+        <div class="ubicacion-info">
+          <h3>Visítanos</h3>
+          <p>
+            Estamos ubicados en el centro de la ciudad con fácil acceso en transporte público. 
+            Contamos con estacionamiento gratuito para nuestros pacientes y horarios flexibles 
+            que se adaptan a tu rutina.
+          </p>
+          <div class="horarios">
+            <h4>Horarios de atención</h4>
+            <ul>
+              <li><strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM</li>
+              <li><strong>Sábados:</strong> 9:00 AM - 2:00 PM</li>
+              <li><strong>Domingos:</strong> Emergencias únicamente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo">
+    <div class="footer-container container">
+      <div class="footer-section">
+        <h3>Navegación</h3>
+        <nav aria-label="Enlaces del pie de página">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <address>
+          <p><span aria-label="Teléfono">📞</span> <a href="tel:+570000000">+57 (1) 234-5678</a></p>
+          <p><span aria-label="Email">✉️</span> <a href="mailto:contacto@clinicadental.com">contacto@clinicadental.com</a></p>
+        </address>
+      </div>
+      <div class="footer-section">
+        <h3>Dirección</h3>
+        <address>
+          <p>Calle 111 #99-55<br>Bogotá, Colombia</p>
+        </address>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <nav aria-label="Redes sociales">
+          <ul class="social-links">
+            <li><a href="#" aria-label="Síguenos en Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="Síguenos en Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Síguenos en Twitter">Twitter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
