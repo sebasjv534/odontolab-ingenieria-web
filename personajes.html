@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personajes Rick and Morty - Clínica Dental</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Volver al inicio">
+        <img src="assets/logo.jpg" alt="Logo de la clínica dental" width="48" height="48" />
+      </a>
+      <nav aria-label="Navegación principal" role="navigation" class="primary-nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="personajes.html" class="nav-link" aria-current="page">Personajes</a></li>
+          <li><a href="index.html#nosotros" class="nav-link">Sobre nosotros</a></li>
+        </ul>
+        <button class="menu-btn" aria-label="Menú de navegación" aria-expanded="false" aria-controls="nav-links" title="Abrir menú">
+          &#9776;
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Hero section -->
+    <section class="hero-personajes" aria-labelledby="personajes-title">
+      <div class="container">
+        <h1 id="personajes-title">Personajes Rick and Morty</h1>
+        <p>Explora el universo de Rick and Morty a través de nuestra integración con la API oficial</p>
+      </div>
+    </section>
+
+    <!-- Controles de búsqueda y filtros -->
+    <section class="controles-personajes container" aria-labelledby="controles-title">
+      <h2 id="controles-title" class="sr-only">Controles de búsqueda y filtros</h2>
+      
+      <div class="search-controls">
+        <div class="search-group">
+          <label for="search-input" class="search-label">Buscar personajes:</label>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Ej: Rick, Morty, Summer..."
+            aria-describedby="search-help"
+          >
+          <button id="search-btn" class="search-btn" aria-label="Buscar personajes">
+            🔍 Buscar
+          </button>
+        </div>
+        <p id="search-help" class="search-help">
+          Escribe el nombre de un personaje para buscarlo específicamente
+        </p>
+      </div>
+
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="status-filter" class="filter-label">Estado:</label>
+          <select id="status-filter" class="filter-select" aria-describedby="status-help">
+            <option value="">Todos los estados</option>
+            <option value="alive">Vivos</option>
+            <option value="dead">Muertos</option>
+            <option value="unknown">Desconocido</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="gender-filter" class="filter-label">Género:</label>
+          <select id="gender-filter" class="filter-select" aria-describedby="gender-help">
+            <option value="">Todos los géneros</option>
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+            <option value="genderless">Sin género</option>
+            <option value="unknown">Desconocido</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="help-texts">
+        <p id="status-help" class="filter-help sr-only">
+          Filtra personajes por su estado vital
+        </p>
+        <p id="gender-help" class="filter-help sr-only">
+          Filtra personajes por género
+        </p>
+      </div>
+    </section>
+
+    <!-- Área de estado de carga -->
+    <section class="loading-area container" aria-live="polite" aria-atomic="true">
+      <div id="loading-message" class="loading-message" style="display: none;">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Cargando personajes...</p>
+      </div>
+      
+      <div id="error-message" class="error-message" style="display: none;" role="alert">
+        <h3>Error al cargar personajes</h3>
+        <p id="error-details"></p>
+        <button id="retry-btn" class="retry-btn">Intentar de nuevo</button>
+      </div>
+    </section>
+
+    <!-- Área de resultados -->
+    <section class="personajes-section container" aria-labelledby="resultados-title">
+      <div class="resultados-header">
+        <h2 id="resultados-title">Resultados</h2>
+        <div id="resultados-count" class="resultados-count" aria-live="polite">
+          <!-- Se actualizará dinámicamente -->
+        </div>
+      </div>
+      
+      <!-- Grid de personajes -->
+      <div id="personajes-grid" class="personajes-grid" role="region" aria-label="Lista de personajes">
+        <!-- Los personajes se cargarán dinámicamente aquí -->
+      </div>
+    </section>
+
+    <!-- Paginación -->
+    <section class="paginacion-section container" aria-labelledby="paginacion-title">
+      <h2 id="paginacion-title" class="sr-only">Navegación de páginas</h2>
+      <div id="paginacion" class="paginacion" role="navigation" aria-label="Paginación de personajes">
+        <!-- Se generará dinámicamente -->
+      </div>
+      
+      <div class="load-more-container">
+        <button id="load-more-btn" class="load-more-btn" style="display: none;">
+          Cargar más personajes
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer role="contentinfo">
+    <div class="footer-container container">
+      <div class="footer-section">
+        <h3>Navegación</h3>
+        <nav aria-label="Enlaces del pie de página">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="personajes.html">Personajes</a></li>
+            <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-section">
+        <h3>API</h3>
+        <p>Datos proporcionados por:</p>
+        <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener noreferrer" aria-label="Rick and Morty API (se abre en nueva ventana)">
+          Rick and Morty API
+        </a>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <address>
+          <p><span aria-label="Teléfono">📞</span> <a href="tel:+570000000">+57 (1) 234-5678</a></p>
+          <p><span aria-label="Email">✉️</span> <a href="mailto:contacto@clinicadental.com">contacto@clinicadental.com</a></p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/personajes.js" defer></script>
+</body>
+</html>
