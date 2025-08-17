@@ -1,5 +1,8 @@
 # Odontolab - Clínica Dental con Integración API Rick and Morty
 
+**Versión:** 1.0.0  
+**Fecha de lanzamiento:** 16 de agosto de 2025
+
 ## 🚀 API Utilizada
 Este proyecto utiliza la **Rick and Morty API** (https://rickandmortyapi.com/) para demostrar el consumo de APIs REST y la renderización dinámica de contenido. La API proporciona información sobre personajes, episodios y ubicaciones de la serie Rick and Morty.
 
