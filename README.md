@@ -1,3 +1,34 @@
+# Odontolab - Clínica Dental con Integración API Rick and Morty
+
+## 🚀 API Utilizada
+Este proyecto utiliza la **Rick and Morty API** (https://rickandmortyapi.com/) para demostrar el consumo de APIs REST y la renderización dinámica de contenido. La API proporciona información sobre personajes, episodios y ubicaciones de la serie Rick and Morty.
+
+## 🏃‍♂️ Cómo correr el proyecto
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/sebasjv534/odontolab-ingenieria-web.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd odontolab-ingenieria-web
+   ```
+3. Abre `index.html` en tu navegador web preferido
+4. Para ver la integración de la API, navega a `personajes.html`
+
+**No requiere instalación de dependencias ni servidor local.**
+
+## ♿ Principios de Accesibilidad Aplicados
+- **Navegación por teclado**: Todos los elementos interactivos son accesibles via teclado
+- **ARIA Labels**: Uso de `aria-label`, `aria-live`, `aria-labelledby` para tecnologías asistivas
+- **Estructura semántica**: HTML5 semántico con elementos `header`, `nav`, `main`, `section`, `article`, `footer`
+- **Contraste de colores**: Paleta de colores que cumple con WCAG 2.1 AA
+- **Textos alternativos**: Imágenes con atributos `alt` descriptivos
+- **Estados de carga**: Mensajes informativos durante la carga de datos de la API
+- **Skip links**: Enlaces para saltar al contenido principal
+- **Responsive design**: Adaptable a diferentes tamaños de pantalla y dispositivos
+
+---
+
 # Web API Taller — Maquetación base (HTML5 + CSS Responsivo)
 
 Este proyecto contiene una maqueta base con HTML semántico y CSS responsivo (mobile‑first) empleando Flexbox, Grid y media queries. También incluye un script mínimo para el menú móvil.
